@@ -1,2 +1,7 @@
 venv
 .idea
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.tif
+**/*.mp4
