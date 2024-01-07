@@ -12,14 +12,18 @@ cap = cv2.VideoCapture("./videos/highway.mp4")
 
 while True:
     _, img = cap.read()
+    img = cv2.resize(img,(0,0), fx=0.5, fy=0.5)
     height, width, _ = img.shape
 
     # Detect Objects
     #results = od.predict(img, conf=0.7, verbose=False)
     results = od.predict(img)
+    print("----------------------")
     print(results)
+    print("----------------------")
 
     cv2.imshow("Frame", img)
+
 
     key = cv2.waitKey(1)
     if key == 27:
